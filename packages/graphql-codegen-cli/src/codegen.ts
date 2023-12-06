@@ -127,10 +127,11 @@ export async function executeCodegen(input: CodegenContext | Types.Config): Prom
         schema:
           - my-schema.graphql
         generates:
-          my-file.ts:
-            - plugin1
-            - plugin2
-            - plugin3`
+          plugins:
+            my-file.ts:
+              - plugin1
+              - plugin2
+              - plugin3`
       );
     }
 
@@ -147,10 +148,11 @@ export async function executeCodegen(input: CodegenContext | Types.Config): Prom
           schema:
             - my-schema.graphql
           generates:
-            my-file.ts:
-              - plugin1
-              - plugin2
-              - plugin3
+            plugins:
+              my-file.ts:
+                - plugin1
+                - plugin2
+                - plugin3
           `
         );
       }
